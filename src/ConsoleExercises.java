@@ -71,7 +71,7 @@ public class ConsoleExercises {
         {
             // Declaration
             Scanner scanner = new Scanner(System.in);
-            scanner.useDelimiter("\n");
+//            scanner.useDelimiter("\n");
             double num1;
             double num2;
             double num3;
@@ -85,7 +85,7 @@ public class ConsoleExercises {
             num1 = scanner.nextInt();
             System.out.println("enter the width");
             num2 = scanner.nextInt();
-            System.out.println("enter the heigth");
+            System.out.println("enter the height");
             num5 = scanner.nextInt();
 
 //            // parse string back to number
