@@ -85,7 +85,7 @@ public class ConsoleExercises {
             num1 = scanner.nextInt();
             System.out.println("enter the width");
             num2 = scanner.nextInt();
-            System.out.println("enter the width");
+            System.out.println("enter the heigth");
             num5 = scanner.nextInt();
 
 //            // parse string back to number
