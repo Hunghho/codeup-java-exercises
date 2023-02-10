@@ -10,14 +10,14 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-//        {
-//            long i = 2;
-//            do {
-//                System.out.println(i);
-//                i *= i;
-//            }while (i < 1000000);
+        {
+            long i = 2;
+            do {
+                System.out.println(i);
+                i *= i;
+            }while (i < 1000000);
 
-//        }
+        }
 
 //        {
 //            for (long i = 2 ; i < 1000000 ; i *= i){
@@ -62,34 +62,34 @@ public class ControlFlowExercises {
 //            }while (confirmation);
 //        }
 
-        {
-           Scanner scanner = new Scanner(System.in);
-           // Declaration
-            int userEnter;
-            String userInput;
-            boolean confirmation;
-
-           // Prompt
-
-            do{
-                System.out.println("Enter a numerical grade from 0 - 100");
-                userEnter = scanner.nextInt();
-                if(userEnter >= 88){
-                    System.out.println("A: 100 - 88");
-                } else if (userEnter >= 80) {
-                    System.out.println("B: 87 - 80");
-                } else if (userEnter >= 67) {
-                    System.out.println("C: 79 - 67");
-                } else if (userEnter >= 60) {
-                    System.out.println("D: 66 - 60");
-                } else {
-                    System.out.println("F: 59 - 0");
-                }
-
-                System.out.println("Continue? [y/N]");
-                userInput = scanner.next();
-                confirmation = userInput.equals("y");
-            }while(confirmation);
-        }
+//        {
+//           Scanner scanner = new Scanner(System.in);
+//           // Declaration
+//            int userEnter;
+//            String userInput;
+//            boolean confirmation;
+//
+//           // Prompt
+//
+//            do{
+//                System.out.println("Enter a numerical grade from 0 - 100");
+//                userEnter = scanner.nextInt();
+//                if(userEnter >= 88){
+//                    System.out.println("A: 100 - 88");
+//                } else if (userEnter >= 80) {
+//                    System.out.println("B: 87 - 80");
+//                } else if (userEnter >= 67) {
+//                    System.out.println("C: 79 - 67");
+//                } else if (userEnter >= 60) {
+//                    System.out.println("D: 66 - 60");
+//                } else {
+//                    System.out.println("F: 59 - 0");
+//                }
+//
+//                System.out.println("Continue? [y/N]");
+//                userInput = scanner.next();
+//                confirmation = userInput.equals("y");
+//            }while(confirmation);
+//        }
     }
 }
