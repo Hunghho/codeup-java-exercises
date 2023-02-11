@@ -10,14 +10,14 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        {
-            long i = 2;
-            do {
-                System.out.println(i);
-                i *= i;
-            }while (i < 1000000);
-
-        }
+//        {
+//            long i = 2;
+//            do {
+//                System.out.println(i);
+//                i *= i;
+//            }while (i < 1000000);
+//
+//        }
 
 //        {
 //            for (long i = 2 ; i < 1000000 ; i *= i){
@@ -39,28 +39,35 @@ public class ControlFlowExercises {
 //            }
 //          }
 
-//        {
-//            Scanner scanner = new Scanner(System.in);
-////            scanner.useDelimiter("\n");
-//            // Declaration
-//            int userEnter;
-//            String userInput;
-//            boolean confirmation;
-//
-//            // Prompt
-//            do{
-//                System.out.println("What number would you like to go up to?");
-//                userEnter = scanner.nextInt();
-//                System.out.println("Here is your table!");
-//                System.out.println("number | squared | cubed\n------ | ------  | ------");
-//                for (int i = 1; i <= userEnter ; i += 1){
-//                    System.out.println(i + "      | " + (i*i) + "       | " + (i*i*i));
-//                }
-//                System.out.println("Continue? [y/N] ");
-//                userInput = scanner.next();
-//                confirmation = userInput.equals("y");
-//            }while (confirmation);
-//        }
+        {
+            Scanner scanner = new Scanner(System.in);
+//            scanner.useDelimiter("\n");
+            // Declaration
+            int userEnter;
+            String userInput;
+            boolean confirmation;
+
+            // Prompt
+            do{
+                System.out.println("What number would you like to go up to?");
+                userEnter = scanner.nextInt();
+                System.out.println("Here is your table!");
+                System.out.println("number | squared | cubed\n------ | ------  | ------");
+                for (int i = 1; i <= userEnter ; i += 1){
+                    String x = i + "      | " + (i * i) + "       | " + (i * i * i);
+                    if (i == 1) {
+                        System.out.println(x);
+                    } else if (i > 1 && i <= 3) {
+                        System.out.println(x);
+                    } else if (i > 3) {
+                        System.out.println(i + "      | " + (i * i) + "      | " + (i * i * i));
+                    }
+                }
+                System.out.println("Continue? [y/N] ");
+                userInput = scanner.next();
+                confirmation = userInput.equals("y");
+            }while (confirmation);
+        }
 
 //        {
 //           Scanner scanner = new Scanner(System.in);

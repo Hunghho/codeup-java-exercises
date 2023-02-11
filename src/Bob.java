@@ -1,15 +1,20 @@
 import java.util.Scanner;
 public class Bob {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         {
             Scanner scanner = new Scanner(System.in);
             boolean confirmation;
             String userEnter;
             String userInput;
-
+            String sentence = "Conversation with Bob the lackadaisical teenage";
+            String[] words = sentence.split(" ");
             do{
-                System.out.println("Conversation with Bob the lackadaisical teenage");
+                for(String word : words) {
+                    System.out.print(word + " ");
+                    Thread.sleep(300);
+                }
+//                System.out.println("Conversation with Bob the lackadaisical teenage");
                 userEnter = scanner.nextLine();
                 if(userEnter.endsWith("!")){
                     System.out.println("Whoa, chill out!");
