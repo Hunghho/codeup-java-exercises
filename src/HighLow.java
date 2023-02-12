@@ -1,17 +1,12 @@
 import java.util.Scanner;
 import java.util.Random;
-public class RandomNumberGuess {
-        public static int randoN() {
-            Random random = new Random();
-            return random.nextInt(100) + 1;
-
-        };
+public class HighLow {
         public static void main(String[] args) throws InterruptedException{
             // New Scanner
             Scanner sc = new Scanner(System.in);
             // Intro to game
             String sentence = """
-                Welcome to Hung's java guessing game!!!
+                Welcome to the guessing game!!!
                  In this game you will guess a number between 1 to 100.
                  You will have 6 guesses total! Good luck!!!
                 \s""";
@@ -35,18 +30,33 @@ public class RandomNumberGuess {
                 userEnter = sc.nextInt();
                 // number of guess decrementing
                 guessAllow --;
+//                System.out.printf("You have %d lives left %n", guessAllow--);
                 if (userEnter == randomNum){
-                    System.out.printf("Congratulations!! you guessed correctly, the number is %d", randomNum);
+                    System.out.printf("GOOD GUESS! you guessed correctly, the number is %d", randomNum);
                     break;
                 } if (userEnter > randomNum) {
                     System.out.println("LOWER");
-                } if (userEnter < randomNum){
+                } if (userEnter < randomNum) {
                     System.out.println("HIGHER");
+                } if (guessAllow == 0){
+                    System.out.println("Sorry you SUCK!");
+                    break;
+                } if (guessAllow == 1){
+                    System.out.printf("You have %d life left %n", guessAllow);
+                } else {
+                    System.out.printf("You have %d lives left %n", guessAllow);
                 }
+
             }while(guessAllow != 0);
             // game over if max out guess
-            if(guessAllow == 0){
-                System.out.println("Sorry you SUCK!");
-            };
+//            if(guessAllow == 0){
+//                System.out.println("Sorry you SUCK!");
+//            };
         }
+
+    public static int randoN() {
+        Random random = new Random();
+        return random.nextInt(100) + 1;
+
+    };
 }
