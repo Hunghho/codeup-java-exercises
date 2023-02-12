@@ -6,7 +6,6 @@ public class Bob {
             Scanner scanner = new Scanner(System.in);
             int conversation = 100;
             String userEnter;
-            String userInput;
             String sentence = "Conversation with Bob the lackadaisical teenage";
             String[] words = sentence.split(" ");
                 for(String word : words) {

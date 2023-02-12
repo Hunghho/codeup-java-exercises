@@ -6,7 +6,13 @@ public class MethodsExercises {
 //        System.out.println(multiplication(2, 5));
 //        System.out.println(division(5, 5));
 //        System.out.println(multiplication(10, 2));
-        getInteger(20, 30);
+//        getInteger(20, 30);
+        int i, fact = 1;
+        int number = 5;
+        for (i = 1 ; i <= number ; i += 1){
+            fact = fact * i;
+        }
+        System.out.printf("Factorial of %d is %d ", number, fact);
     }
 
 //    public static int addition (int a, int b){
@@ -39,22 +45,22 @@ public class MethodsExercises {
 //
 //    }
 
-    public static int getInteger(int min, int max){
-        Scanner sc = new Scanner(System.in);
-        int userEnter;
-        System.out.printf("Enter a number between %d and %d ", min, max);
-        userEnter = sc.nextInt();
-        do {
-            if (userEnter > min && userEnter < max){
-                System.out.printf("%d is in range of %d and %d ", userEnter, min, max);
-                break;
-            } else {
-                System.out.printf("%d is not in range of %d and %d%n ", userEnter, min, max);
-            }
-            System.out.println("Enter a different number");
-            userEnter = sc.nextInt();
-        }while(userEnter < min && userEnter > max);
-        return userEnter;
-    }
+//    public static int getInteger(int min, int max){
+//        Scanner sc = new Scanner(System.in);
+//        int userEnter;
+//        System.out.printf("Enter a number between %d and %d ", min, max);
+//        userEnter = sc.nextInt();
+//        do {
+//            if (userEnter > min && userEnter < max){
+//                System.out.printf("%d is in range of %d and %d ", userEnter, min, max);
+//                break;
+//            } else {
+//                System.out.printf("%d is not in range of %d and %d%n ", userEnter, min, max);
+//            }
+//            System.out.println("Enter a different number");
+//            userEnter = sc.nextInt();
+//        }while(userEnter < min && userEnter > max);
+//        return userEnter;
+//    }
 
 }
