@@ -2,7 +2,7 @@ package shapes;
 import util.Input;
 public class CircleApp {
     public static void main(String[] args) {
-        System.out.println("Enter a radius");
+        System.out.println("Enter a radius of the circle");
         Input userInput = new Input();
         double userEnterRadius = userInput.getDouble();
         Circle circle = new Circle(userEnterRadius);
