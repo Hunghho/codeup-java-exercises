@@ -30,7 +30,6 @@ public class HighLow {
                 userEnter = sc.nextInt();
                 // number of guess decrementing
                 guessAllow --;
-//                System.out.printf("You have %d lives left %n", guessAllow--);
                 if (userEnter == randomNum){
                     System.out.printf("GOOD GUESS! you guessed correctly, the number is %d", randomNum);
                     break;
@@ -48,10 +47,6 @@ public class HighLow {
                 }
 
             }while(guessAllow != 0);
-            // game over if max out guess
-//            if(guessAllow == 0){
-//                System.out.println("Sorry you SUCK!");
-//            };
         }
 
     public static int randoN() {
