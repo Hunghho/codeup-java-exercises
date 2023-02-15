@@ -2,11 +2,10 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private final Scanner sc;
-
-    public Input(){
-        this.sc = new Scanner(System.in);
-    }
+    private final Scanner sc = new Scanner(System.in);
+//    public Input(){
+//        this.sc = new Scanner(System.in);
+//    }
     public String getString() {
         return this.sc.nextLine();
     }

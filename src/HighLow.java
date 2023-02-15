@@ -6,16 +6,15 @@ public class HighLow {
             Scanner sc = new Scanner(System.in);
             // Intro to game
             String sentence = """
-                Welcome to the guessing game!!!
-                 In this game you will guess a number between 1 to 100.
+                 Enter a number between 1 to 100.
                  You will have 6 guesses total! Good luck!!!
                 \s""";
             // turning sentence to array
-            String[] words = sentence.split(" ");
+            String[] words = sentence.split("");
             // delay each word in array to print
             for (String word : words){
                 System.out.print(word + " ");
-                Thread.sleep(100);
+                Thread.sleep(300);
             }
 
             // Storing random number
@@ -25,7 +24,6 @@ public class HighLow {
             // user enter number
             int userEnter;
             // do/while loop
-            System.out.println("Enter a number between 1 to 100");
             do{
                 userEnter = sc.nextInt();
                 // number of guess decrementing
