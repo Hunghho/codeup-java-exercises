@@ -1,24 +1,20 @@
 public class JavaWarmUp {
+
     public static void main(String[] args) {
-        int[][] matrix = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
 
-        for (int[] row : matrix) {
-            System.out.println("+---+---+---+");
+      Double[] numbers = new Double[5];
+      numbers[0] = 1.0;
+      numbers[1] = 2.0;
+      numbers[2] = 3.0;
+      numbers[3] = 4.0;
+      numbers[4] = 5.0;
 
-            System.out.print("| ");
+      double sum = 0.0;
+      for(Double number : numbers){
+          sum += number;
+      }
+        System.out.println(sum);
 
-//            for (int n : row) {
-//                System.out.print(n + " | ");
-//            }
-//
-//            System.out.println();
-        }
-
-//        System.out.println("+---+---+---+");
     }
 
 }

@@ -21,6 +21,7 @@ public class Input {
     public int getInt(int min, int max) {
         int userNumber = getInt();
         if (userNumber < min || userNumber > max) {
+            System.out.println("Invalid input");
             userNumber = getInt(min, max);
         }
         return userNumber;
