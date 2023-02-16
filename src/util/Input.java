@@ -11,16 +11,17 @@ public class Input {
     }
 
     public Boolean yesNo() {
-        System.out.println("Continue? [y/N]");
-        String userInput = this.sc.nextLine();
-        return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
+       if(getString().equalsIgnoreCase("y") || getString().equalsIgnoreCase("yes")){
+           return true;
+       }else{
+           return false;
+       }
     }
 
     public int getInt(int min, int max) {
-        System.out.printf("Enter a number between %d and %d", min, max);
-        int userNumber = this.sc.nextInt();
+        int userNumber = getInt();
         if (userNumber < min || userNumber > max) {
-            getInt(min, max);
+            userNumber = getInt(min, max);
         }
         return userNumber;
     }
@@ -30,8 +31,7 @@ public class Input {
     }
 
     double getDouble(double min, double max) {
-        System.out.printf("Give me a number between %s and %s", min, max);
-        double userNum = this.sc.nextDouble();
+        double userNum = getDouble();
         if (userNum < min || userNum > max) {
             userNum = getDouble(min, max);
         }
