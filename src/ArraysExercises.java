@@ -19,7 +19,7 @@ public class ArraysExercises {
             System.out.println(person.getName());
         }
         // add more people to the array
-        people = addPerson(people, new Person("Batman"));
+        people = Person.addPerson(people, new Person("Batman"));
 
         for(Person person : people){
             System.out.println(person.getName());
@@ -28,11 +28,4 @@ public class ArraysExercises {
 
     }
 
-    public static Person[] addPerson(Person[] people, Person newPerson ){
-        // create a new array from people array adding to length
-        Person[] newArray = Arrays.copyOf(people, people.length + 1);
-        // add new person to newArray
-        newArray[newArray.length - 1] = newPerson;
-        return newArray;
-    }
 }
