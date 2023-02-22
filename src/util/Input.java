@@ -2,45 +2,67 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private final Scanner sc = new Scanner(System.in);
-//    public Input(){
-//        this.sc = new Scanner(System.in);
-//    }
-    public String getString() {
-        return this.sc.nextLine();
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static String getString(String prompt) {
+        System.out.println(prompt);
+        return scanner.nextLine();
     }
 
-    public Boolean yesNo() {
-       if(getString().equalsIgnoreCase("y") || getString().equalsIgnoreCase("yes")){
-           return true;
-       }else{
-           return false;
-       }
-    }
-
-    public int getInt(int min, int max) {
-        int userNumber = getInt();
-        if (userNumber < min || userNumber > max) {
-            System.out.println("Invalid input");
-            userNumber = getInt(min, max);
+    public static boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String userInput = scanner.next();
+        if (userInput.equalsIgnoreCase("y")
+                || userInput.equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
         }
-        return userNumber;
     }
 
-    int getInt() {
-        return this.sc.nextInt();
-    }
-
-    double getDouble(double min, double max) {
-        double userNum = getDouble();
-        if (userNum < min || userNum > max) {
-            userNum = getDouble(min, max);
+    public static int getInt(int min, int max) {
+        int userInput = scanner.nextInt();
+        if (userInput < min || userInput > max) {
+            return getInt(min, max);
+        } else {
+            return userInput;
         }
-        return userNum;
     }
 
-    public double getDouble() {
-        return this.sc.nextDouble();
+    public static int getInt() {
+        try{
+            return Integer.parseInt(getString("Enter an integer: "));
+        }catch(NumberFormatException ex){
+            System.out.println(ex.getMessage());
+            return getInt();
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+            return 0;
+        }
     }
+
+    public static double getDouble(double min, double max) {
+        System.out.println("Enter a decimal number between " + min + " and " + max + ":");
+        double userInput = scanner.nextDouble();
+        if (userInput < min || userInput > max) {
+            return getDouble(min, max);
+        } else {
+            return userInput;
+        }
+    }
+
+    public static double getDouble(String prompt) {
+        try{
+            return Double.parseDouble(getString(prompt));
+        } catch(NumberFormatException ex){
+            System.out.println(ex.getMessage());
+            return getDouble(prompt);
+        }
+    }
+
+    public static boolean hasNewLine(){
+        return scanner.hasNextLine();
+    }
+
 
 }
