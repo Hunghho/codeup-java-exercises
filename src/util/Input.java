@@ -32,11 +32,11 @@ public class Input {
     public static int getInt() {
         try{
             return Integer.parseInt(getString("Enter an integer: "));
-        }catch(NumberFormatException ex){
-            System.out.println(ex.getMessage());
+        }catch(NumberFormatException nfx){
+            System.out.println(nfx.getMessage());
             return getInt();
-        }catch (Exception ex){
-            System.out.println(ex.getMessage());
+        }catch (Exception nfx){
+            System.out.println(nfx.getMessage());
             return 0;
         }
     }
@@ -54,8 +54,8 @@ public class Input {
     public static double getDouble(String prompt) {
         try{
             return Double.parseDouble(getString(prompt));
-        } catch(NumberFormatException ex){
-            System.out.println(ex.getMessage());
+        } catch(NumberFormatException nfx){
+            System.out.println(nfx.getMessage());
             return getDouble(prompt);
         }
     }

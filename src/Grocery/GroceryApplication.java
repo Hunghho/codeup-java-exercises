@@ -19,8 +19,8 @@ public class GroceryApplication {
 
    public void displayPoultry(){
        System.out.println("Poultry List");
-       for(Poultry x : poultryList){
-           System.out.println("| Item: " + x.getItemName() + " | " + "| Qty: " + x.getItemQuantity() + " |");
+       for(Poultry poultry : poultryList){
+           System.out.println("| Item: " + poultry.getItemName() + " | " + "| Qty: " + poultry.getItemQuantity() + " |");
        }
    }
 
@@ -33,8 +33,8 @@ public class GroceryApplication {
 
     public void displayProduce(){
         System.out.println("Produce List");
-        for(Produce x : producesList){
-            System.out.println("| Item: " + x.getItemName() + " | " + "| Qty: " + x.getItemQuantity() + " |" );
+        for(Produce produce : producesList){
+            System.out.println("| Item: " + produce.getItemName() + " | " + "| Qty: " + produce.getItemQuantity() + " |" );
         }
     }
 
