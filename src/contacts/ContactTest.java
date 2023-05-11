@@ -26,6 +26,9 @@ public class ContactTest {
     }
 
     public static void main(String[] args) {
+
+        String printFormat = "| %-10s | %10s |\n";
+        System.out.printf(printFormat, "name", "phone number");
 //        Path path = Paths.get("src");
 //        System.out.println(path);
 //
@@ -42,8 +45,8 @@ public class ContactTest {
 //        } catch (IOException iox){
 //            iox.printStackTrace();
 //        }
-
-        Path pathToMyList = Paths.get("src/data/list.txt");
+//
+//        Path pathToMyList = Paths.get("src/data/list.txt");
 //        try {
 //            if (Files.notExists(pathToMyList)){
 //                Files.createFile(pathToMyList);
@@ -55,9 +58,9 @@ public class ContactTest {
 //            iox.printStackTrace();
 //        }
 
-        List<String> spices = Arrays.asList("cardamom", "ginger", "saffron", "nutmeg", "black pepper", "salt");
-
-        Path pathToOtherFile = Paths.get("src/data/doesntExist.txt");
+//        List<String> spices = Arrays.asList("cardamom", "ginger", "saffron", "nutmeg", "black pepper", "salt");
+//
+//        Path pathToOtherFile = Paths.get("src/data/doesntExist.txt");
 
 //        try {
 //            Files.write(pathToOtherFile, spices);
@@ -79,15 +82,15 @@ public class ContactTest {
 //        readFileAndOutput(pathToMyList);
 //        System.out.println("------------");
 //
-        try {
-            Files.writeString(pathToMyList, "cumin\n", StandardOpenOption.APPEND);
-        } catch (IOException iox){
-            iox.printStackTrace();
-        }
+//        try {
+//            Files.writeString(pathToMyList, "cumin\n", StandardOpenOption.APPEND);
+//        } catch (IOException iox){
+//            iox.printStackTrace();
+//        }
 //
 //        readFileAndOutput(pathToMyList);
 //
-        List<String> currentList = new ArrayList<>();
+  /*      List<String> currentList = new ArrayList<>();
         try {
             currentList = Files.readAllLines(pathToOtherFile);
         } catch (IOException iox){
@@ -102,11 +105,11 @@ public class ContactTest {
         }
 //        currentList.removeIf(item -> item.equals("ginger"));
         try {
-            Files.write(pathToMyList, currentList);
+            Files.write(pathToOtherFile, currentList);
         } catch (IOException iox) {
             iox.printStackTrace();
         }
         System.out.println("-----------");
-        readFileAndOutput(pathToOtherFile);
+        readFileAndOutput(pathToOtherFile);*/
     }
 }
